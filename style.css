@@ -1,0 +1,205 @@
+/* Hero sekcija */
+.hero-section {
+    position: relative;
+    background-image: url('img/bkg.jpg'); /* Zamijenite s putanjom do vaše slike */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Puni visinu preglednika */
+    color: #ffffff; /* Bijela boja teksta */
+    display: flex;
+    align-items: center;
+}
+
+.hero-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Crna boja s 50% prozirnošću */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1; /* Osigurava da se overlay prikazuje iznad slike */
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 2; /* Osigurava da se tekst prikazuje iznad overlay-a */
+    text-align: center; /* Poravnava tekst u središtu */
+}
+/* Primjena serifnog fonta na naslove */
+
+.hero-section h1 {
+    font-family: 'Playfair Display', serif; /* Primjena Playfair Display fonta za hero sekciju */
+    font-size: 4rem; /* Povećava veličinu naslova */
+    font-weight: bold; /* Podebljava naslov */
+    margin-bottom: 1rem; /* Dodaje razmak ispod naslova */
+}
+
+.hero-section p {
+    font-size: 1.5rem; /* Povećava veličinu podnaslova */
+    margin: 0; /* Uklanja zadane margine */
+}
+
+
+/* Sekcija Rezervacije */
+#reservation {
+    position: relative;
+    background-image: url('img/rezervacija.jpg'); /* Dodajte putanju do vaše slike pozadine */
+    background-size: cover; /* Osigurava da pozadina pokriva cijeli prostor */
+    background-position: center; /* Pozicionira sliku u centru sekcije */
+    color: white; /* Postavlja boju teksta na bijelu za bolju vidljivost */
+    padding: 60px 0; /* Povećava padding za bolju raspodjelu sadržaja */
+}
+
+#reservation .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Overlay sa crnom bojom i 50% prozirnosti */
+    z-index: 1; /* Osigurava da overlay bude iznad pozadinske slike */
+}
+
+#reservation .container {
+    position: relative;
+    z-index: 2; /* Osigurava da sadržaj bude iznad overlaya */
+}
+
+/* Stilizacija input polja */
+#reservation .form-control {
+    background: rgba(255, 255, 255, 0.7); /* Prozirna pozadina za input polja */
+    border: none; /* Uklanja border za čisti izgled */
+    color: #333; /* Boja teksta unutar input polja */
+}
+
+/* Stilizacija gumba */
+#reservation .btn {
+    background-color: #28a745; /* Boja gumba */
+    border-color: #28a745; /* Boja obruba gumba */
+}
+
+/* Sekcija Galerija */
+#galleryCarousel .carousel-item img {
+    object-fit: cover; /* Osigurava da slike pokrivaju cijeli prostor unutar carousel-a */
+    height: 400px; /* Postavlja fiksnu visinu za slike */
+}
+
+/* Postavljanje dimenzija slika u jelovniku */
+.card-img-top {
+    width: 100%; /* Širina slike da se prilagodi širini kartice */
+    height: 200px; /* Postavite visinu prema potrebi */
+    object-fit: cover; /* Osigurava da slika popunjava okvir bez deformacija */
+    border-bottom: 1px solid #ddd; /* Dodajte donju granicu ako želite razdvojiti sliku od sadržaja */
+}
+
+/* Stilizacija gumba za rezervaciju s tamnijim plavim nijansama */
+#reservation .btn {
+    background-color: #0056b3; /* Dark Blue za pozadinu dugmeta */
+    border-color: #0056b3; /* Dark Blue za boju obruba dugmeta */
+    color: #fff; /* Bijela boja teksta unutar dugmeta */
+    display: block; /* Postavlja dugme kao blok element */
+    margin: 0 auto; /* Automatski razmak lijevo i desno za centriranje */
+}
+
+/* Promjena boje gumba pri prelasku mišem */
+#reservation .btn:hover {
+    background-color: #003d79; /* Deep Blue pri prelasku mišem */
+    border-color: #003d79; /* Deep Blue za boju obruba pri prelasku mišem */
+}
+
+/* Stil za navigacijske linkove */
+.navbar-nav .nav-item .nav-link {
+    position: relative; /* Omogućava pozicioniranje pseudo-elementa u odnosu na link */
+    color: #ddd; /* Boja teksta za neaktivne stavke */
+    padding: 10px 15px; /* Razmak unutar linka */
+    border-radius: 4px; /* Zaobljeni kutovi */
+    text-decoration: none; /* Uklanja podcrtavanje */
+}
+
+.navbar-nav .nav-item .nav-link::after {
+    content: ''; /* Prazan sadržaj za pseudo-element */
+    position: absolute; /* Pozicionira element u odnosu na roditelj */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px; /* Visina linije */
+    background-color: #007bff; /* Boja linije */
+    transform: scaleX(0); /* Početno stanje: linija je skrivena */
+    transform-origin: bottom right; /* Porijeklo transformacije */
+    transition: transform 0.3s ease; /* Glatka animacija */
+}
+
+.navbar-nav .nav-item:hover .nav-link::after {
+    transform: scaleX(1); /* Širi liniju kad je mišem preko */
+    transform-origin: bottom left; /* Porijeklo transformacije pri hoveru */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #fff; /* Bijela boja teksta pri hoveru */
+}
+
+
+/* Mobilni telefoni (do 768px) */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem; /* Manja veličina naslova za mobilne telefone */
+    }
+
+    .hero-section p {
+        font-size: 1rem; /* Manja veličina podnaslova za mobilne telefone */
+    }
+
+    #reservation .form-control {
+        font-size: 0.875rem; /* Manji font za input polja na mobilnim telefonima */
+    }
+
+    .card-img-top {
+        height: 150px; /* Manja visina slika u karticama za mobilne telefone */
+    }
+    
+    #galleryCarousel .carousel-item img {
+        height: 300px; /* Manja visina slika u galeriji za mobilne telefone */
+    }
+
+    .navbar-nav {
+        text-align: center; /* Centriranje stavki u navigaciji na mobilnim telefonima */
+    }
+}
+
+/* Tableti i manji desktop ekrani (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-section h1 {
+        font-size: 3rem; /* Srednja veličina naslova za tablete i manje desktop ekrane */
+    }
+
+    .hero-section p {
+        font-size: 1.25rem; /* Srednja veličina podnaslova za tablete i manje desktop ekrane */
+    }
+
+    #reservation .form-control {
+        font-size: 1rem; /* Standardna veličina fonta za input polja na tabletima */
+    }
+    
+    #galleryCarousel .carousel-item img {
+        height: 350px; /* Srednja visina slika u galeriji za tablete */
+    }
+}
+
+/* Veći desktop ekrani (preko 1024px) */
+@media (min-width: 1024px) {
+    .hero-section h1 {
+        font-size: 4rem; /* Velika veličina naslova za velike ekrane */
+    }
+
+    .hero-section p {
+        font-size: 1.5rem; /* Velika veličina podnaslova za velike ekrane */
+    }
+
+    #galleryCarousel .carousel-item img {
+        height: 400px; /* Velika visina slika u galeriji za velike ekrane */
+    }
+}
+
