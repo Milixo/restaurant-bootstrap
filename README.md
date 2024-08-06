@@ -23,4 +23,4 @@ Ova web stranica predstavlja restoran s funkcionalnostima kao što su pregled je
 
    Klonirajte repozitorij na svoje lokalno računalo koristeći Git:
    ```bash
-   git clone https://github.com/korisnickoime/restoran-web-stranica.git
+   git clone https://github.com/Milixo/restoran-web-stranica.git
